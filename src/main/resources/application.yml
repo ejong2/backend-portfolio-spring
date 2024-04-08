@@ -1,0 +1,25 @@
+logging:
+  level:
+    root: info
+
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+        use_sql_comments: true
+        jdbc:
+          time_zone: Asia/Seoul
+    show-sql: false
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/be_portfolio?serverTimezone=UTC&characterEncoding=UTF-8
+    username: root
+    password: 1234
+    driverClassName: com.mysql.cj.jdbc.Driver
+
+  config:
+    activate:
+      on-profile: dev
